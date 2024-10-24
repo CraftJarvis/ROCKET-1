@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>ROCKET-1: ROCKET-1: Master Open-World Interaction with Visual-Temporal Context Prompting</title>
+  <title>ROCKET-1: Master Open-World Interaction with Visual-Temporal Context Prompting</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -68,8 +68,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">ROCKET-1: Interact with Open Worlds by
-            Prompting in Visual-Temporal Context</h1>
+            <h1 class="title is-1 publication-title">ROCKET-1: Master Open-World Interaction with Visual-Temporal Context Prompting</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -186,19 +185,22 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Vision-language models (VLMs) have excelled in multimodal tasks, but adapting them to embodied decision-making in
-            open-world environments presents challenges.
-            Hierarchical agent architectures typically use VLMs as planners, relying on language and future images to convey intent
-            to low-level policies.
-            However, language cannot often effectively capture spatial information while future images are challenging to generate
-            with homology and high fidelity.
-            We propose visual-temporal context prompting, a novel task representation interface that uses object segmentation from
-            past and present observations to guide policy-environment interactions. With this approach, we learn <b>ROCKET-1</b>, a low-level
-            policy that predicts actions based on concatenated observations and segmentation masks, enhanced by SAM-2 for real-time
-            object tracking. Powered by <b>ROCKET-1</b>, we can now release VLMs' visual language reasoning capability for solving diverse
-            creative tasks, particularly those strongly dependent on spatial information. Experiments in Minecraft show that our
-            approach enables agents to solve previously unattainable tasks, highlighting the effectiveness of visual-temporal
-            context prompting for embodied decision-making.
+            Vision-language models (VLMs) have excelled in multimodal tasks, but adapting them to embodied
+            decision-making in open-world environments presents challenges. A key issue is the difficulty in smoothly
+            connecting individual entities in low-level observations with abstract concepts required for planning. A
+            common approach to address this problem is through the use of hierarchical agents, where VLMs serve as
+            high-level reasoners that break down tasks into executable sub-tasks, typically specified using language
+            and imagined observations. However, language often fails to effectively convey spatial information, while
+            generating future images with sufficient accuracy remains challenging. To address these limitations,
+            we propose visual-temporal context prompting, a novel communication protocol between VLMs and
+            policy models. This protocol leverages object segmentation from both past and present observations to
+            guide policy-environment interactions. Using this approach, we train ROCKET-1, a low-level policy
+            that predicts actions based on concatenated visual observations and segmentation masks, with real-time
+            object tracking provided by SAM-2. Our method unlocks the full potential of VLMs’ visual-language
+            reasoning abilities, enabling them to solve complex creative tasks, especially those heavily reliant
+            on spatial understanding. Experiments in Minecraft demonstrate that our approach allows agents
+            to accomplish previously unattainable tasks, highlighting the effectiveness of visual-temporal context
+            prompting in embodied decision-making.
           </p>
         </div>
       </div>
@@ -212,7 +214,7 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container is-max-desktop">
-      <h2 class="title is-3">Model Architecture and Data Pipeline</h2>
+      <h2 class="title is-3">Method</h2>
       <div style="text-align: center;">
         <img src="static/images/pipeline.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
       </div>
@@ -228,6 +230,14 @@
         <b>Trajectory relabeling pipeline in Minecraft.</b> A bounding box and point selection are applied to the image center in the
         frame preceding the interaction event to identify the interaction object. SAM-2 is then run in reverse temporal order
         for a specified duration, with the interaction type remaining consistent throughout.
+      <div style="text-align: center;">
+        <img src="static/images/combination.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+      </div>
+      <h2 class="subtitle has-text-justified">
+        <b>Integration with high-level reasoner.</b> A GPT-4o model decomposes complex tasks into steps based on the current observation, while the Molmo model identifies
+        interactive objects by outputting points. SAM-2 segments these objects based on the point prompts, and <b>ROCKET-1</b> uses the
+        object masks and interaction types to make decisions. GPT-4o and Molmo run at low frequencies, while SAM-2 and <b>ROCKET-1</b>
+        operate at the same frequency as the environment.
     </div>
   </div>
 </section>
@@ -447,70 +457,8 @@
 </section>
 <!-- End image carousel -->
 
-
-<!-- Image carousel -->
-<section class="section hero is-light">
-  <div class="hero-body"> <div class="container is-max-desktop">
-
-    <h2 class="title is-3">The CraftJarvis Series</h2>
-
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/related-deps.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          <a href="https://arxiv.org/abs/2302.01560/">
-            <b>Describe, Explain, Plan and Select: Interactive Planning <br> with Large Language Models Enables Open-World Multi-Task Agents</b> <br>
-          </a>
-            <b>(Team CraftJarvis)</b> <br>
-            Neurips 2023 | ICML 2023 TEACH Workshop (Best Paper Award)
-            
-        </h2>
-        <h2 class="subtitle has-text-justified">
-          DEPS is an interactive planning approach based on Large Language Models (LLMs). 
-          It helps with better error correction from the feedback during the long-haul planning, while also bringing the sense of proximity via goal Selector, a learnable module that ranks parallel sub-goals based on the estimated steps of completion and improves the original plan accordingly. 
-         </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/related-mcu.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          <a href="https://arxiv.org/abs/2310.08367/">
-            <b>MCU: A Task-centric Framework for Open-ended Agent Evaluation in Minecraft</b> <br>
-          </a>
-            <b>(Team CraftJarvis)</b> <br>
-        </h2>
-        <h2 class="subtitle has-text-justified">
-          MCU is an open-ended Minecraft agent evaluation framework that can generate infinite tasks and reveal the difficulty of tasks. In MCU, "task" is a structured data object. MCU leverages "atom tasks" as building blocks to compose complex tasks. Each task is measured with six distinct difficulty scores, which offer a multi-dimensional assessment of a task from different angles.  We also maintain a unified benchmark, namely SkillForge, which comprises representative tasks under MCU framework. Researchers can filter specific tasks with certain properties or attributes from SkillForge to test their agent. 
-         </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/related-cvpr.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          <a href="https://arxiv.org/abs/2301.10034/">
-            <b>Open-World Multi-Task Control Through <br> Goal-Aware Representation Learning and Adaptive Horizon Prediction</b> <br>
-          </a>
-          <b>(Team CraftJarvis)</b> <br>
-          CVPR 2023
-        </h2>
-        <h2 class="subtitle has-text-justified">
-          This paper studies the problem of learning goal-conditioned policies in Minecraft. It first identify two main challenges of learning such policies and then propose to combine a goal-sensitive backbone and an adaptive horizon prediction module to tackle these challenges. 
-         </h2>
-      </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
 <!--BibTex citation -->
-  <section class="section hero" id="BibTeX">
+  <section class="section hero is-light" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>
