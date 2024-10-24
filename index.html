@@ -62,6 +62,19 @@
       height: auto;
     }
   </style>
+  <style>
+    .video-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 2 columns */
+        grid-template-rows: repeat(2, 1fr); /* 3 rows */
+        gap: 10px;
+    }
+    .video-grid iframe {
+        width: 320px;
+        height: 180px; /* Set a fixed height for iframes */
+        border: none; /* Remove border for cleaner look */
+    }
+  </style>
 
   <section class="hero">
     <div class="hero-body">
@@ -181,50 +194,33 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container is-max-desktop">
-      <div class="container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item">
-            <div style="text-align: center;">
-              <iframe width="640" height="360" src="https://www.youtube.com/embed/JF35N8uqBos">
-              </iframe>
-            </div>
-          </div>
-          <div class="item">
-              <div style="text-align: center;">
-                <iframe width="640" height="360" src="https://www.youtube.com/embed/a21fSBacKzw">
-                </iframe>
-              </div>
-          </div>
-          <div class="item">
-              <div style="text-align: center;">
-                <iframe width="640" height="360" src="https://www.youtube.com/embed/aIzjihIUbGE">
-                </iframe>
-              </div>
-          </div>
-          <div class="item">
-            <div style="text-align: center;">
-              <iframe width="640" height="360" src="https://www.youtube.com/embed/tpB5VeA6dFQ">
-              </iframe>
-            </div>
-          </div>
-          <div class="item">
-            <div style="text-align: center;">
-              <iframe width="640" height="360" src="https://www.youtube.com/embed/iH_PIXagcHA">
-              </iframe>
-            </div>
-          </div>
-          <div class="item">
-              <div style="text-align: center;">
-                <iframe width="640" height="360" src="https://www.youtube.com/embed/FazZwH2Qxv8">
-                </iframe>
-              </div>
-          </div>
-        </div>
-        <h2 class="subtitle has-text-centered">
-          Videos of <b>ROCKET-1</b> playing Minecraft.
-        </h2>
+      <div style="text-align: center;">
+                <div class="video-grid">
+                  <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/JF35N8uqBos" allowfullscreen></iframe>
+                  </div>
+                  <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/a21fSBacKzw" allowfullscreen></iframe>
+                  </div>
+                  <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/aIzjihIUbGE" allowfullscreen></iframe>
+                  </div>
+                  <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/tpB5VeA6dFQ" allowfullscreen></iframe>
+                  </div>
+                  <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/iH_PIXagcHA" allowfullscreen></iframe>
+                  </div>
+                  <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/FazZwH2Qxv8" allowfullscreen></iframe>
+                  </div>
+                </div>
       </div>
+      <h2 class="subtitle has-text-centered">
+          Videos of <b>ROCKET-1</b> playing Minecraft.
+      </h2>
     </div>
+  </div>
 </section>
 <!-- End image carousel -->
 
