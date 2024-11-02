@@ -13,7 +13,6 @@ from pathlib import Path
 import hydra
 import torch
 from torch import nn
-from torchmetrics import Metric
 
 from rocket.arm.utils.vpt_lib.action_head import make_action_head
 from rocket.arm.utils.vpt_lib.normalize_ewma import NormalizeEwma

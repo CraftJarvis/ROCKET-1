@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rocket"
-version="0.0.1"
+version="1.0"
 description = "ROCKET-1 Library"
 dependencies = [
     "opencv-python==4.7.0.72",
@@ -28,6 +28,7 @@ dependencies = [
     "attr==0.3.2",
     "attrs==22.1.0",
     "dm_tree==0.1.7",
+    "gym",
     "gym3==0.3.3",
     "gymnasium",
     "hydra_colorlog", 
@@ -36,31 +37,19 @@ dependencies = [
     "Pillow==9.4.0",
     "transformers==4.31.0",
     "tree==0.2.4",
-    "tabulate",
     "cchardet",
     "torch",
     "torchvision>=0.16.0",
-    "torchaudio",
-    "torchmetrics",
     "tokenizers",
-    "timm==0.9.10", 
     "efficientnet_pytorch", 
     "scipy",
     "flaky",
-    "pyglet",
-    "pynput",
     "rich",
-    "ipdb",
-    "watermark",
     "lz4",
-    "kornia",
     "chardet", 
     "cuda-python",
     "diskcache", 
-    "procgen",
     "cython==3.0.0a10",
-    "ale-py",
-    "humanize",
     "portalocker",
     "gradio>=5.0.0", 
     "openai==1.52.2",
