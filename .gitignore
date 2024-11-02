@@ -24,7 +24,7 @@ pretrained
 *.png
 .vscode
 *.mp4
-*.json
+# *.json
 multirun
 debug_scripts/
 global_utils/
