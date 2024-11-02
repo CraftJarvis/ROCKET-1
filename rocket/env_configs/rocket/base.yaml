@@ -1,0 +1,15 @@
+
+close_ended: True
+seed: 19961103
+random_tp_range: 1000
+time_limit: 2000
+fast_reset: False
+slow_reset_interval: 9
+start_time: 0
+origin_resolution: [640, 360]
+resize_resolution: [224, 224]
+
+masked_actions: {}
+
+enable_tasks: 
+  - traj_condition

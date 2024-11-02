@@ -1,0 +1,57 @@
+
+defaults:
+  - base
+  - _self_
+
+task_conf:
+  traj_condition:
+    text: "pinpoint the obsidian block|Interact"
+    reward_conf:
+      mine_block: 
+        dirt:
+          objs:
+            - someobj
+          quantity_rewarded: 1000
+          reward: 1.0
+
+candidate_preferred_spawn_biome: 
+  - plains
+candidate_weather: 
+  - clear
+
+init_inventory: 
+  0: 
+    type: flint_and_steel
+    quantity: 1
+
+custom_init_commands:
+- /setblock ^ ^ ^8 obsidian
+- /setblock ^ ^1 ^8 obsidian
+- /setblock ^ ^2 ^8 obsidian
+- /setblock ^ ^3 ^8 obsidian
+- /setblock ^ ^4 ^8 obsidian
+- /setblock ^ ^5 ^8 obsidian
+- /setblock ^1 ^5 ^8 obsidian
+- /setblock ^2 ^5 ^8 obsidian
+- /setblock ^3 ^5 ^8 obsidian
+- /setblock ^4 ^5 ^8 obsidian
+- /setblock ^4 ^4 ^8 obsidian
+- /setblock ^4 ^3 ^8 obsidian
+- /setblock ^4 ^2 ^8 obsidian
+- /setblock ^4 ^1 ^8 obsidian
+- /setblock ^4 ^ ^8 obsidian
+- /setblock ^3 ^ ^8 obsidian
+- /setblock ^2 ^ ^8 obsidian
+- /setblock ^1 ^ ^8 obsidian
+
+# masked_actions: 
+#   inventory: 0
+#   hotbar.1: 0
+#   hotbar.2: 0
+#   hotbar.3: 0
+#   hotbar.4: 0
+#   hotbar.5: 0
+#   hotbar.6: 0
+#   hotbar.7: 0
+#   hotbar.8: 0
+#   hotbar.9: 0

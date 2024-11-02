@@ -1,0 +1,36 @@
+
+defaults:
+  - base
+  - _self_
+
+task_conf:
+  traj_condition:
+    text: "if outside the house pinpoint the door, if inside the house pinpoint the chest|Interact"
+    reward_conf:
+      mine_block: 
+        dirt:
+          objs:
+            - dirt
+            - grass_block
+          quantity_rewarded: 1000
+          reward: 1.0
+
+
+
+candidate_preferred_spawn_biome: 
+  - in_front_of_chest_house
+candidate_weather: 
+  - clear 
+
+# masked_actions: 
+#   inventory: 0
+#   hotbar.1: 0
+#   hotbar.2: 0
+#   hotbar.3: 0
+#   hotbar.4: 0
+#   hotbar.5: 0
+#   hotbar.6: 0
+#   hotbar.7: 0
+#   hotbar.8: 0
+#   hotbar.9: 0
+
