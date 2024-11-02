@@ -278,8 +278,8 @@ def draw_gradio_components(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--port", type=int, default=7862)
-    parser.add_argument("--sam-path", type=str, required=True)
+    parser.add_argument("--port", type=int, default=7860)
+    parser.add_argument("--sam-path", type=str, required=True, default="/app/ROCKET-1/rocket/realtime_sam/checkpoints")
     parser.add_argument("--molmo-id", type=str, default="molmo-72b-0924")
     parser.add_argument("--molmo-url", type=str, default="http://127.0.0.1:8000/v1")
     args = parser.parse_args()
