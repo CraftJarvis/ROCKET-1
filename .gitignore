@@ -4,9 +4,7 @@ tmp
 logs/
 wandb/
 rocket/stark_tech/MCP-Reborn
-rocket/stark_tech/MCP-Reborn-bak
 rocket/stark_tech/tmp
-rocket/stark_tech/env_test.mp4
 *recordings
 *.log
 build 
@@ -30,7 +28,6 @@ debug_scripts/
 global_utils/
 *.lprof
 MCP-Reborn
-*.txt
 *.html
 *.pem
 *.ckpt
