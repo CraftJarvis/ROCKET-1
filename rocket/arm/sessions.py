@@ -162,7 +162,6 @@ class Session:
                     'obj_mask': obj_mask, 
                 }
             }
-            import ipdb; ipdb.set_trace()
             action, self.state = self.agent.get_action(obs, self.state, first=None, input_shape="*")
 
         self.obs, self.reward, terminated, truncated, self.info = self.env.step(action)
