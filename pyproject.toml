@@ -45,7 +45,6 @@ dependencies = [
     "tokenizers",
     "timm==0.9.10", 
     "efficientnet_pytorch", 
-    "lightning",
     "scipy",
     "flaky",
     "pyglet",
@@ -63,7 +62,7 @@ dependencies = [
     "ale-py",
     "humanize",
     "portalocker",
-    "gradio==5.3.0", 
+    "gradio>=5.0.0", 
     "openai==1.52.2",
 ]
 authors = [
