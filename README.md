@@ -8,7 +8,6 @@ All authors are affiliated with Team **[`CraftJarvis`](https://craftjarvis.githu
 
 ![](rocket/assets/teaser.png)
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/qXLWw81p-Y0" title="[ROCKET-1] Playing Minecraft with ROCKET-1 on a Gradio Page" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Latest updates
 
@@ -54,6 +53,9 @@ env_action = MinecraftWrapper.agent_action_to_env(agent_action)
 ```
 
 ## Play ROCKET-1 with Gradio
+Click the following picture to learn how to play ROCKET-1 with gradio. 
+[![](rocket/assets/gradio.png)](https://www.youtube.com/embed/qXLWw81p-Y0)
+
 ```sh
 cd rocket/arm
 python eval_rocket.py --port 8110 --sam-path "/path/to/sam2-ckpt-directory"
