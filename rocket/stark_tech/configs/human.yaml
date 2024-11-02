@@ -1,0 +1,8 @@
+
+hydra:
+  run:
+    dir: outputs/human/${env}/${now:%m-%d_%H-%M-%S}
+
+env: play
+enable_bot: False
+output_dir: '.'

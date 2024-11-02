@@ -1,0 +1,48 @@
+
+defaults:
+  - base
+  - _self_
+
+task_conf:
+  traj_condition:
+    text: "pinpoint the tree|Mine"
+    reward_conf:
+      mine_block: 
+        log:
+          quantity_rewarded: 100
+          reward: 1
+          objs:
+            - oak_log
+            - spruce_log
+            - birch_log
+            - jungle_log
+            - acacia_log
+            - dark_oak_log
+            - stripped_oak_log
+            - stripped_spruce_log
+            - stripped_birch_log
+            - stripped_jungle_log
+            - stripped_acacia_log
+            - stripped_dark_oak_log
+
+init_inventory: 
+  0: 
+    type: iron_axe
+    quantity: 1
+
+candidate_preferred_spawn_biome: 
+  - forest
+candidate_weather: 
+  - clear
+
+# masked_actions: 
+#   inventory: 0
+#   hotbar.1: 0
+#   hotbar.2: 0
+#   hotbar.3: 0
+#   hotbar.4: 0
+#   hotbar.5: 0
+#   hotbar.6: 0
+#   hotbar.7: 0
+#   hotbar.8: 0
+#   hotbar.9: 0

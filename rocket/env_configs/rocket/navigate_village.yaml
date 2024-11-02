@@ -1,0 +1,21 @@
+
+defaults:
+  - base
+  - _self_
+
+task_conf:
+  traj_condition:
+    text: "pinpoint the sand house|Approach"
+    reward_conf:
+      mine_block: 
+        none:
+          objs:
+            - none
+          quantity_rewarded: 3
+          reward: 1.0
+
+
+candidate_preferred_spawn_biome: 
+  - to_village
+candidate_weather: 
+  - clear

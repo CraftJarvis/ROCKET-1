@@ -1,0 +1,26 @@
+
+defaults:
+  - base
+  - _self_
+
+task_conf:
+  traj_condition:
+    text: "pinpoint the block beneath your feet|Mine"
+    reward_conf:
+      mine_block: 
+        dirt:
+          objs:
+            - dirt
+            - grass_block
+          quantity_rewarded: 1000
+          reward: 0.0
+
+init_inventory: 
+  0: 
+    type: diamond_pickaxe
+    quantity: 1
+
+candidate_preferred_spawn_biome: 
+  - plains
+candidate_weather: 
+  - clear

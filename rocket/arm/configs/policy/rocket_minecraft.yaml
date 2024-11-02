@@ -1,0 +1,41 @@
+name: rocket_minecraft
+policy_name: ROCKET
+
+from:
+  model: Null
+  weights: Null
+
+policy_kwargs: 
+  attention_heads: 8
+  attention_mask_style: clipped_causal
+  attention_memory_size: 256 # 128
+  hidsize: 1024
+  init_norm_kwargs:
+    batch_norm: False
+    group_norm_groups: 1
+  n_recurrence_layers: 4
+  only_img_input: True
+  pointwise_ratio: 4
+  pointwise_use_activation: False
+  recurrence_is_residual: True
+  recurrence_type: transformer
+  timesteps: 128 # 64
+  use_pointwise_layer: True
+  use_pre_lstm_ln: False
+  word_dropout: 0.0
+
+  backbone_kwargs:
+    name: 'EFFICIENTNET'
+    img_shape: [224, 224, 3]
+    version: 'efficientnet-b4'
+    pooling: False
+    accept_segment: True
+
+pi_head_kwargs: 
+  temperature: 1.0
+
+auxiliary_head_kwargs:
+  - 
+    name: 'minecraft_recon_head'
+    alias: 'minecraft'
+    enable: True
