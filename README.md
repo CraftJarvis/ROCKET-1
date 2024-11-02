@@ -18,6 +18,7 @@ All authors are affiliated with Team **[`CraftJarvis`](https://craftjarvis.githu
 ```sh
 git clone git@github.com:CraftJarvis/ROCKET-1.git
 conda create -n rocket python=3.10
+conda activate rocket
 conda install --channel=conda-forge openjdk=8
 # install ROCKET-1
 cd ROCKET-1
