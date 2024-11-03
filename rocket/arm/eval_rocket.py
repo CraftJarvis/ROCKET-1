@@ -178,6 +178,7 @@ def draw_gradio_components(args):
             2. You can use the `Clear Memory` button to clear the ROCKET-1's memory. 
             3. You can use the `Clear Segment` button to clear SAM's memory. 
             4. You can use the `Manually Step` button to manually step the agent. 
+            5. If you using huggingface demo, then `Molmo` service is not available. 
             """
         )
         
