@@ -4,7 +4,7 @@
 
 All authors are affiliated with Team **[`CraftJarvis`](https://craftjarvis.github.io/)**. 
 
-[[`Project`](https://craftjarvis.github.io/ROCKET-1/)] | [[`Paper`](https://arxiv.org/abs/2410.17856)] | [[`huggingface`](https://huggingface.co/papers/2410.17856)] | [[`BibTex`](#citig_rocket)] 
+[[`Project`](https://craftjarvis.github.io/ROCKET-1/)] | [[`Paper`](https://arxiv.org/abs/2410.17856)] | [[`huggingface`](https://huggingface.co/papers/2410.17856)] | [[`Demo`](https://huggingface.co/spaces/phython96/ROCKET-1-DEMO)] | [[`BibTex`](#citig_rocket)] 
 
 ![](rocket/assets/teaser.png)
 
