@@ -84,7 +84,7 @@ input = {
     'obj_mask': torch.zeros(224, 224, dtype=torch.uint8),   # highlight the regions of interest
   }
 }
-agent_action, memory = self.agent.get_action(input, memory, first=None, input_shape="*")
+agent_action, memory = model.get_action(input, memory, first=None, input_shape="*")
 env_action = MinecraftWrapper.agent_action_to_env(agent_action)
 
 # --------------------- the output --------------------- #
