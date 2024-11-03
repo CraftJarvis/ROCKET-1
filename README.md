@@ -14,12 +14,14 @@ All authors are affiliated with Team **[`CraftJarvis`](https://craftjarvis.githu
 - **11/03/2024 -- We have built a huggingface space for online demo!**
 - **11/02/2024 -- ROCKET-1 inference scripts is released!**
 
-## Installation
-Run on docker. 
+## Docker
+
 ```sh
 docker run -it -p 7860:7860 --platform=linux/amd64 --gpus all \
 	registry.hf.space/phython96-rocket-1-demo:latest 
 ```
+
+## Installation
 
 First, download the scripts and install dependencies. 
 
