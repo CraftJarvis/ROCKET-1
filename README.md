@@ -12,7 +12,7 @@ All authors are affiliated with Team **[`CraftJarvis`](https://craftjarvis.githu
 ## Latest updates
 
 - **11/03/2024 -- We have built a huggingface space for online demo!**
-- **11/02/2024 -- ROCKET-1 inference scripts is released!**
+- **11/02/2024 -- ROCKET-1 inference scripts are released!**
 
 ## Docker
 
