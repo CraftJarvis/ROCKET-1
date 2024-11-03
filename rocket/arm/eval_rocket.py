@@ -274,7 +274,7 @@ def draw_gradio_components(args):
                 molmo_btn.click(molmo_fn, inputs=[molmo_text, molmo_session, rocket_session, display_image],outputs=[output_text, display_image],show_progress=False)
 
         demo.queue()
-        demo.launch(share=False,server_port=args.port)
+        demo.launch(share=False, server_port=args.port, server_name="0.0.0.0")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
