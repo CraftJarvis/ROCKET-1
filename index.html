@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>ROCKET-1: Master Open-World Interaction with Visual-Temporal Context Prompting</title>
+  <title>ROCKET-1: Mastering Open-World Interaction with Visual-Temporal Context Prompting</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -271,22 +271,15 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Vision-language models (VLMs) have excelled in multimodal tasks, but adapting them to embodied
-            decision-making in open-world environments presents challenges. A key issue is the difficulty in smoothly
-            connecting individual entities in low-level observations with abstract concepts required for planning. A
-            common approach to address this problem is through the use of hierarchical agents, where VLMs serve as
-            high-level reasoners that break down tasks into executable sub-tasks, typically specified using language
-            and imagined observations. However, language often fails to effectively convey spatial information, while
-            generating future images with sufficient accuracy remains challenging. To address these limitations,
-            we propose visual-temporal context prompting, a novel communication protocol between VLMs and
-            policy models. This protocol leverages object segmentation from both past and present observations to
-            guide policy-environment interactions. Using this approach, we train ROCKET-1, a low-level policy
-            that predicts actions based on concatenated visual observations and segmentation masks, with real-time
-            object tracking provided by SAM-2. Our method unlocks the full potential of VLMs’ visual-language
-            reasoning abilities, enabling them to solve complex creative tasks, especially those heavily reliant
-            on spatial understanding. Experiments in Minecraft demonstrate that our approach allows agents
-            to accomplish previously unattainable tasks, highlighting the effectiveness of visual-temporal context
-            prompting in embodied decision-making.
+            Vision-language models (VLMs) have excelled in multimodal tasks, but adapting them to embodied decision-making in open-world environments presents challenges. 
+            One critical issue is bridging the gap between discrete entities in low-level observations and the abstract concepts required for effective planning. 
+            A common solution is building hierarchical agents, where VLMs serve as high-level reasoners that break down tasks into executable sub-tasks, typically specified using language. 
+            However, language suffers from the inability to communicate detailed spatial information. 
+            We propose visual-temporal context prompting, a novel communication protocol between VLMs and policy models. 
+            This protocol leverages object segmentation from past observations to guide policy-environment interactions. 
+            Using this approach, we train ROCKET-1, a low-level policy that predicts actions based on concatenated visual observations and segmentation masks, supported by real-time object tracking from SAM-2. 
+            Our method unlocks the potential of VLMs, enabling them to tackle complex tasks that demand spatial reasoning. 
+            Experiments in Minecraft show that our approach enables agents to achieve previously unattainable tasks, with a 76% absolute improvement in open-world interaction performance. 
           </p>
         </div>
       </div>
