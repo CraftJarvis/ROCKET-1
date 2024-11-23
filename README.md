@@ -1,4 +1,4 @@
-# ROCKET-1: Master Open-World Interaction with Visual-Temporal Context Prompting
+# ROCKET-1: Mastering Open-World Interaction with Visual-Temporal Context Prompting
 
 [`Shaofei Cai`](https://phython96.github.io/) | [`Zihao Wang`](https://zhwang4ai.github.io/) | [`Kewei Lian`](https://kevin-lkw.github.io/) | [`Zhancun Mu`](https://zhancunmu.owlstown.net/) | [`Xiaojian Ma`](https://jeasinema.github.io/) | [`Anji Liu`](https://liuanji.github.io/) | [`Yitao Liang`](https://scholar.google.com/citations?user=KVzR1XEAAAAJ&hl=zh-CN&oi=ao)
 
