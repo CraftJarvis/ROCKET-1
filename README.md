@@ -11,7 +11,7 @@ All authors are affiliated with Team **[`CraftJarvis`](https://craftjarvis.githu
 
 ## Latest updates
 
-- **01/06/2025 -- We have provided a new implementation through [MineStudio](https://github.com/CraftJarvis/MineStudio)! Please refer to this [document](https://craftjarvis.github.io/MineStudio/models/baseline-rocket1.html)!** ❗️❗️❗️
+- **01/06/2025 -- We have provided a new implementation through [MineStudio](https://github.com/CraftJarvis/MineStudio)! Please refer to this [document](https://craftjarvis.github.io/MineStudio/models/baseline-rocket1.html)!** 
 - **11/03/2024 -- We have built a Hugging Face space for the online demo!**
 - **11/02/2024 -- ROCKET-1 inference scripts are released!**
 
